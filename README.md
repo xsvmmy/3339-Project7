@@ -6,7 +6,7 @@ Proposed File Structure:
 
 — main.py                  # Parses CLI args; starting point
 
-—MIPSSimulator/
+—MIPSSimulator
     __init__.py
 
     —Instruction.py       # Instruction class + binary string representation
@@ -22,7 +22,7 @@ Proposed File Structure:
 
     —Output.py            # all formatting logic for dump and debug mode
 
-—programs/
+—programs
     —TestInstructionsFull.asm     # demo program using every instruction
     —TestArithmetic.asm           # focused arithmetic test
     —TestMemory.asm               # focused LW/SW test
