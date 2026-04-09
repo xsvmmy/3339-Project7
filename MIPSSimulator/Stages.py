@@ -1,8 +1,11 @@
 '''
-MIPSSimulator/Stages.py
-Defines the 5 pipeline stages as methods of Pipeline class in Pipeline
+Filename: MIPSSimulator/Stages.py
+Description: Defines the pipeline latches for the 5 stages of the MIPS pipeline
 Contributors: Samantha Hanna
 '''
+
+# from .Control import ControlSignals
+# from .Instructions import NOP
 
 class IF_ID_Latch:
     def __init__(self):
