@@ -163,4 +163,6 @@ class Pipeline:
  
     def dump(self):
         # Print the final state of the register file and memory.
+        import Output
+        output.print_final_state(self)
         
