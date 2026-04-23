@@ -45,6 +45,8 @@ Samantha Hanna:
 - Control.py
 - Stages.py
 - Pipeline.py
+- asm test files
+- main.py
 
 Vanny Bundick:
 - Decoder.py
@@ -52,5 +54,9 @@ Vanny Bundick:
 - Output.py
 
 Amul Poudel:
+- Instruction.py
+- ALU.py
+- Memory.py
+
 
 John Parsons:
