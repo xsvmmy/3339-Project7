@@ -1,6 +1,7 @@
 '''
 Filename: MIPSSimulator/Control.py
 Description: Control signal generation for MIPS instructions
+Contributor: Samantha Hanna
 '''
 
 class ControlSignals:

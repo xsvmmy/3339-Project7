@@ -2,6 +2,7 @@
 Filename: MIPSSimulator/Debug.py
 Description: Debug output for the MIPS pipeline simulator.
              Prints register file, state registers, and control signals each cycle.
+Contributor: Samantha Hanna
 """
 
 from .Instruction import REGISTER_ALIASES

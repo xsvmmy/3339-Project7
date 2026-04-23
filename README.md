@@ -41,10 +41,10 @@ python main.py --*flag*
 
 ### Contributions
 Samantha Hanna:
-- ALU.py
 - Control.py
 - Stages.py
 - Pipeline.py
+- Debug.py
 - asm test files
 - main.py
 

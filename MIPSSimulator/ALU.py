@@ -1,7 +1,7 @@
 """
 Filename: MIPSSimulator/ALU.py
 Description: ALU implementation for the MIPS pipeline simulator.
-Contributors: Samantha Hanna, Amul Poudel
+Contributor: Amul Poudel
 """
 
 
