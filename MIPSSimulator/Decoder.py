@@ -16,7 +16,9 @@ class Decoder:
     self.labels: dict[str, int] = {}          # Dictionary mapping label names -> PC
 
   def decode(self) -> list[Instruction]:
-    lines = self._read_file() 
+    self.instructions = []
+    self.labels = {}
+    lines = self._read_file()
 
     # First Pass: Collect Labels
     pc = 0                                    # program counter for instruction index
