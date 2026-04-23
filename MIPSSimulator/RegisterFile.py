@@ -2,6 +2,8 @@
 Register file for MIPS simulator.
 
 Simulates the 32 general-purpose registers in MIPS.
+
+Contributor: Vanny Bundick
 """
 
 class RegisterFile:
