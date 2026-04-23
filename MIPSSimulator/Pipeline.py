@@ -121,8 +121,14 @@ class Pipeline:
         next_if_id  = self.stage_IF()
         next_id_ex  = self.stage_ID()
         next_ex_mem = self.stage_EX()
+        pc_before   = self.pc
         next_mem_wb = self.stage_MEM()
         self.stage_WB()
+
+        if self.pc != pc_before:
+            next_if_id  = IF_ID_Latch()
+            next_id_ex  = ID_EX_Latch()
+            next_ex_mem = EX_MEM_Latch()
 
         self.if_id  = next_if_id
         self.id_ex  = next_id_ex
@@ -130,7 +136,7 @@ class Pipeline:
         self.mem_wb = next_mem_wb
 
         if debug:
-            Output.print_cycle_state(self)
+            Debug.print_cycle_state(self)
 
     def run(self, debug: bool = False):
         while not self.is_done():
