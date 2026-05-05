@@ -44,8 +44,9 @@ python main.py --*flag* *file.asm*
 
 Example: python main.py --debug TestInstructionsFullMain.asm
 
-Website link: https://project7-2-4rwq.onrender.com/
-May take a while as this is free tier but you can test via website too.
+### Website link: https://project7-2-4rwq.onrender.com/
+
+May take a while as this is free tier and also may show like not found but try to refresh and wait a bit it will come up and you can test via website too.
 
 ## Contributions
 Samantha Hanna:
