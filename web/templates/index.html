@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIPS Pipeline Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="header-logo">M</div>
+    <div class="header-text">
+        <h1>MIPS Pipeline Simulator</h1>
+        <p>5-stage pipeline · No hazard detection · Insert NOPs manually</p>
+    </div>
+    <div class="header-stages">
+        <span class="stage-badge">IF</span>
+        <span class="stage-badge">ID</span>
+        <span class="stage-badge">EX</span>
+        <span class="stage-badge">MEM</span>
+        <span class="stage-badge">WB</span>
+    </div>
+</header>
+
+<main>
+    <!-- ── Editor panel ─────────────────────────────────── -->
+    <section class="editor-panel">
+        <div class="panel-header">
+            <span class="panel-title">Assembly</span>
+            <div class="options">
+                <label class="opt-label">
+                    <input type="checkbox" id="opt-debug">
+                    <span>Debug</span>
+                </label>
+                <label class="opt-label">
+                    <input type="checkbox" id="opt-hex">
+                    <span>Hex</span>
+                </label>
+                <label class="opt-label">
+                    <input type="checkbox" id="opt-binary">
+                    <span>Binary</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="editor-wrapper">
+            <div class="line-numbers" id="line-numbers" aria-hidden="true"></div>
+            <textarea
+                id="code-editor"
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                placeholder="Enter MIPS assembly here…"
+            ></textarea>
+        </div>
+
+        <button class="run-btn" id="run-btn" title="Run simulation (⌘ Enter)">
+            <div class="spinner"></div>
+            <span id="run-icon">▶</span>
+            Run Simulation
+        </button>
+    </section>
+
+    <!-- ── Output panel ─────────────────────────────────── -->
+    <section class="output-panel">
+        <div id="error-banner" class="error-banner" role="alert"></div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="output">Output</button>
+            <button class="tab-btn" data-tab="registers" id="tab-registers-btn">
+                Registers
+                <span class="tab-count" id="reg-count">—</span>
+            </button>
+            <button class="tab-btn" data-tab="memory" id="tab-memory-btn">
+                Memory
+                <span class="tab-count" id="mem-count">—</span>
+            </button>
+        </div>
+
+        <div class="tab-content" id="tab-output">
+            <pre class="terminal" id="output-terminal">Run a program to see output…
+
+Tip: check "Debug" for per-cycle pipeline state.
+Tip: use ⌘ Enter (or Ctrl+Enter) to run quickly.</pre>
+        </div>
+
+        <div class="tab-content hidden" id="tab-registers">
+            <div class="registers-grid" id="registers-grid">
+                <p class="placeholder" style="grid-column: 1/-1">Run a program to see register state.</p>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="tab-memory">
+            <div class="memory-table-wrapper" id="memory-content">
+                <p class="memory-empty">Run a program to see memory state.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
